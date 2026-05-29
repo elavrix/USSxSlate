@@ -1,0 +1,127 @@
+.footer {
+  min-height: 560px;
+  padding: 96px 0 38px;
+  background: #08090B;
+  border-top: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-bg-text {
+  position: absolute;
+  left: 50%;
+  bottom: -2vw;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.035);
+  font-size: clamp(5rem, 15vw, 17rem);
+  font-weight: 900;
+  letter-spacing: -0.08em;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.footer-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 72px;
+}
+
+.footer-brand {
+  display: grid;
+  gap: 24px;
+}
+
+.footer-lockup {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.footer-lockup img:first-child {
+  width: 190px;
+  max-height: 86px;
+}
+
+.footer-lockup img:last-child {
+  height: 28px;
+}
+
+.footer-lockup span {
+  color: var(--accent);
+  font-size: 2.6rem;
+  font-weight: 200;
+}
+
+.footer-brand p {
+  max-width: 560px;
+  color: var(--text-muted);
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px;
+}
+
+.footer-column {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+
+.footer-column h3 {
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.footer-column a {
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.95rem;
+}
+
+.footer-column a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 28px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 0.9rem;
+}
+
+.footer-bottom div {
+  display: flex;
+  gap: 24px;
+}
+
+@media (max-width: 980px) {
+  .footer-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-lockup {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
