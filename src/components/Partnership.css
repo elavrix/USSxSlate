@@ -190,6 +190,11 @@
 }
 
 @media (max-width: 1100px) {
+  .partnership {
+    min-height: auto;
+    padding: 96px 0;
+  }
+
   .partnership-kpis {
     gap: 20px;
   }
@@ -214,6 +219,10 @@
 }
 
 @media (max-width: 860px) {
+  .partnership-kpis {
+    grid-template-columns: 1fr;
+  }
+
   .partnership-alliance.partnership-kpis {
     grid-template-columns: 1fr;
   }
@@ -244,15 +253,36 @@
   }
 
   .partnership-copy h2 {
-    font-size: clamp(3rem, 15vw, 4.6rem);
+    font-size: clamp(2.85rem, 14vw, 4.4rem);
+    letter-spacing: -0.058em;
   }
 
   .partnership-visual {
     min-height: 360px;
   }
 
+  .visual-caption {
+    left: 22px;
+    right: 22px;
+    bottom: 22px;
+  }
+
   .alliance-logos,
   .alliance-proof {
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 440px) {
+  .partnership-main {
+    gap: 34px;
+  }
+
+  .partnership-visual {
+    min-height: 300px;
+  }
+
+  .partnership-kpi strong {
+    font-size: 1.28rem;
   }
 }

@@ -130,8 +130,14 @@
 }
 
 @media (max-width: 980px) {
+  .fleet-specs {
+    min-height: auto;
+    padding: 104px 0;
+  }
+
   .fleet-specs-inner {
     grid-template-columns: 1fr;
+    gap: 56px;
   }
 }
 
@@ -144,5 +150,29 @@
     grid-template-columns: 1fr;
     gap: 8px;
     padding: 20px 0;
+  }
+
+  .fleet-specs-copy h2 {
+    font-size: clamp(2.7rem, 13vw, 4.1rem);
+    letter-spacing: -0.058em;
+  }
+
+  .fleet-contact {
+    padding: 24px 22px;
+  }
+
+  .fleet-specs-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .fleet-contact a:first-of-type {
+    font-size: 1.34rem;
+  }
+
+  .fleet-contact a:last-of-type,
+  .fleet-contact p {
+    overflow-wrap: anywhere;
   }
 }

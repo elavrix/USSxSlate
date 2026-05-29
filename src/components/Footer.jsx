@@ -16,9 +16,9 @@ export default function Footer() {
       <div className="footer-inner container">
         <div className="footer-brand">
           <div className="footer-lockup">
-            <img src={imageConfig.logos.ussc} alt="USSC" />
+            <img src={imageConfig.logos.ussc} alt="USSC" loading="lazy" decoding="async" />
             <span>x</span>
-            <img src={imageConfig.logos.slate} alt="Slate Auto" />
+            <img src={imageConfig.logos.slate} alt="Slate Auto" loading="lazy" decoding="async" />
           </div>
           <p>Strategic Commercial EV Partnership for federal, municipal and enterprise fleet operations.</p>
         </div>
@@ -38,7 +38,7 @@ export default function Footer() {
             <h3>Contact</h3>
             <a href="mailto:partnerships@ussc.com">partnerships@ussc.com</a>
             <a href="tel:+18000000000">1-800-000-0000</a>
-            <a href="#consultation">Request Consultation</a>
+            <a href="#reserve-slate">Request Consultation</a>
           </div>
         </nav>
 

@@ -9,6 +9,15 @@
   --container: 1440px;
 }
 
+:root[data-theme='light'] {
+  --primary-bg: #F7F3EA;
+  --secondary-bg: #FFFFFF;
+  --text: #101217;
+  --text-muted: #56606C;
+  --border: rgba(16, 18, 23, 0.14);
+  --accent-soft: rgba(199, 154, 59, 0.18);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -28,6 +37,7 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
   text-rendering: geometricPrecision;
+  transition: background 260ms ease, color 260ms ease;
 }
 
 body::selection {
@@ -59,6 +69,197 @@ img {
   background:
     radial-gradient(circle at 20% 0%, rgba(199, 154, 59, 0.08), transparent 30%),
     var(--primary-bg);
+}
+
+[data-theme='light'] .app {
+  background:
+    radial-gradient(circle at 20% 0%, rgba(199, 154, 59, 0.13), transparent 30%),
+    var(--primary-bg);
+}
+
+[data-theme='light'] .section,
+[data-theme='light'] .hero,
+[data-theme='light'] .partnership,
+[data-theme='light'] .why-partnership,
+[data-theme='light'] .vehicle-platform,
+[data-theme='light'] .industries,
+[data-theme='light'] .fleet-specs,
+[data-theme='light'] .procurement {
+  background:
+    radial-gradient(circle at 18% 12%, rgba(199, 154, 59, 0.12), transparent 28%),
+    linear-gradient(180deg, #FBF8F1, #EFE8DB 54%, #FBF8F1);
+}
+
+[data-theme='light'] .hero-bg {
+  opacity: 1;
+  background:
+    linear-gradient(90deg, rgba(247, 243, 234, 0.97), rgba(247, 243, 234, 0.78) 43%, rgba(247, 243, 234, 0.2)),
+    linear-gradient(180deg, rgba(247, 243, 234, 0.2), rgba(247, 243, 234, 0.88)),
+    url('/assets/images/environments/image-BG-2.png') center / cover no-repeat;
+}
+
+[data-theme='light'] .partnership-atmosphere {
+  opacity: 0.48;
+  background:
+    linear-gradient(90deg, rgba(16, 18, 23, 0.035), transparent 24%, transparent 76%, rgba(16, 18, 23, 0.03)),
+    radial-gradient(circle at 50% 44%, rgba(199, 154, 59, 0.1), transparent 34%);
+}
+
+[data-theme='light'] h1,
+[data-theme='light'] h2,
+[data-theme='light'] h3,
+[data-theme='light'] .section-title,
+[data-theme='light'] .partnership-copy h2,
+[data-theme='light'] .vehicle-name,
+[data-theme='light'] .hero-copy h1,
+[data-theme='light'] .customization-heading h2,
+[data-theme='light'] .platform-copy h2,
+[data-theme='light'] .industries-heading h2,
+[data-theme='light'] .fleet-specs-copy h2,
+[data-theme='light'] .procurement-heading h2,
+[data-theme='light'] .consultation-title h2 {
+  color: var(--text);
+}
+
+[data-theme='light'] p,
+[data-theme='light'] .hero-subheadline,
+[data-theme='light'] .section-copy,
+[data-theme='light'] .partnership-copy p:not(.eyebrow),
+[data-theme='light'] .customization-heading p:not(.eyebrow),
+[data-theme='light'] .platform-copy p:not(.eyebrow),
+[data-theme='light'] .fleet-specs-copy > p:not(.eyebrow),
+[data-theme='light'] .spec-note {
+  color: var(--text-muted);
+}
+
+[data-theme='light'] .partnership-visual,
+[data-theme='light'] .fleet-contact,
+[data-theme='light'] .consultation-card,
+[data-theme='light'] .timeline-circle,
+[data-theme='light'] .form-grid input,
+[data-theme='light'] .form-grid textarea {
+  background: rgba(255, 255, 255, 0.82);
+  border-color: var(--border);
+}
+
+[data-theme='light'] .partnership-kpi strong,
+[data-theme='light'] .platform-metrics strong,
+[data-theme='light'] .spec-row strong,
+[data-theme='light'] .fleet-contact a:first-of-type,
+[data-theme='light'] .timeline-step h3,
+[data-theme='light'] .origin-message strong {
+  color: var(--text);
+}
+
+[data-theme='light'] .eyebrow,
+[data-theme='light'] .origin-message span,
+[data-theme='light'] .origin-lockup span,
+[data-theme='light'] .visual-caption span,
+[data-theme='light'] .customization-label span,
+[data-theme='light'] .fleet-contact a:last-of-type,
+[data-theme='light'] .form-success,
+[data-theme='light'] .platform-arrow,
+[data-theme='light'] .platform-selector button.active {
+  color: var(--accent);
+}
+
+[data-theme='light'] .platform-selector button.active {
+  background: var(--accent);
+}
+
+[data-theme='light'] .alliance-line,
+[data-theme='light'] .origin-divider {
+  background: linear-gradient(180deg, transparent, rgba(199, 154, 59, 0.82), transparent);
+}
+
+[data-theme='light'] .industry-tile,
+[data-theme='light'] .customization-tile {
+  background: #111317;
+  border-color: rgba(16, 18, 23, 0.16);
+}
+
+[data-theme='light'] .industry-tile h3,
+[data-theme='light'] .customization-label h3,
+[data-theme='light'] .visual-caption strong {
+  color: #ffffff;
+}
+
+[data-theme='light'] .customization-tile img,
+[data-theme='light'] .partnership-visual > img {
+  filter: saturate(0.98) brightness(0.9);
+}
+
+[data-theme='light'] .hero-vehicle {
+  filter: saturate(0.98) brightness(1);
+}
+
+[data-theme='light'] .origin-slate {
+  filter: brightness(0) saturate(1);
+  opacity: 0.72;
+}
+
+[data-theme='light'] .platform-image-stage img {
+  filter: drop-shadow(0 34px 34px rgba(16, 18, 23, 0.28));
+}
+
+[data-theme='light'] .platform-selector button {
+  background: rgba(16, 18, 23, 0.2);
+}
+
+[data-theme='light'] .platform-count,
+[data-theme='light'] .platform-metrics span,
+[data-theme='light'] .partnership-kpi span,
+[data-theme='light'] .spec-row span,
+[data-theme='light'] .timeline-step p {
+  color: var(--text-muted);
+}
+
+[data-theme='light'] .timeline-circle {
+  color: var(--text);
+  border-color: rgba(199, 154, 59, 0.52);
+  box-shadow: 0 12px 34px rgba(199, 154, 59, 0.12);
+}
+
+[data-theme='light'] .fleet-specs-button {
+  color: var(--text);
+  background: rgba(199, 154, 59, 0.08);
+}
+
+[data-theme='light'] .fleet-specs-button:hover {
+  background: rgba(199, 154, 59, 0.16);
+}
+
+[data-theme='light'] .hero-origin-bar {
+  border-top-color: rgba(16, 18, 23, 0.1);
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.9), rgba(250, 245, 235, 0.86), rgba(255, 255, 255, 0.9)),
+    rgba(255, 255, 255, 0.76);
+}
+
+[data-theme='light'] .form-grid input,
+[data-theme='light'] .form-grid textarea {
+  color: var(--text);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.74);
+}
+
+[data-theme='light'] .form-grid input::placeholder,
+[data-theme='light'] .form-grid textarea::placeholder {
+  color: rgba(16, 18, 23, 0.48);
+}
+
+[data-theme='light'] .consultation-card {
+  box-shadow: 0 34px 90px rgba(16, 18, 23, 0.14);
+}
+
+[data-theme='light'] .footer {
+  background: #111317;
+}
+
+@media (max-width: 1100px) {
+  [data-theme='light'] .origin-divider,
+  [data-theme='light'] .alliance-line {
+    background: linear-gradient(90deg, transparent, rgba(199, 154, 59, 0.82), transparent);
+  }
 }
 
 .section {
@@ -142,6 +343,12 @@ img {
   .container {
     width: min(100% - 36px, var(--container));
   }
+
+  .primary-button,
+  .secondary-button {
+    min-height: 50px;
+    padding: 0 22px;
+  }
 }
 
 @media (max-width: 560px) {
@@ -151,5 +358,15 @@ img {
 
   .section-title {
     font-size: clamp(2.2rem, 12vw, 3.4rem);
+  }
+
+  .eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.13em;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
   }
 }

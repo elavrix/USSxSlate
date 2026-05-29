@@ -83,7 +83,7 @@ export default function WhyPartnership() {
               variants={tileVariants}
               whileHover={{ y: -8 }}
             >
-              <img src={feature.image} alt={feature.title} />
+              <img src={feature.image} alt={feature.title} loading="lazy" decoding="async" />
               <div className="customization-label">
                 <span>{feature.kicker}</span>
                 <h3>{feature.title}</h3>

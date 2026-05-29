@@ -54,7 +54,7 @@ export default function Industries() {
               variants={tileVariants}
               whileHover={{ y: -8 }}
             >
-              <img src={image} alt={`${name} fleet operations`} />
+              <img src={image} alt={`${name} fleet operations`} loading="lazy" decoding="async" />
               <span>{name}</span>
             </motion.article>
           ))}

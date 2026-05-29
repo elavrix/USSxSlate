@@ -60,6 +60,15 @@
 }
 
 @media (max-width: 980px) {
+  .procurement {
+    min-height: auto;
+    padding: 104px 0;
+  }
+
+  .procurement-heading {
+    margin-bottom: 56px;
+  }
+
   .timeline {
     grid-template-columns: repeat(2, 1fr);
     gap: 42px 18px;
@@ -71,7 +80,29 @@
 }
 
 @media (max-width: 560px) {
+  .procurement {
+    padding: 88px 0;
+  }
+
   .timeline {
     grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .timeline-step {
+    grid-template-columns: 72px 1fr;
+    justify-items: start;
+    gap: 18px;
+    text-align: left;
+  }
+
+  .timeline-circle {
+    width: 64px;
+    height: 64px;
+  }
+
+  .timeline-step h3 {
+    max-width: none;
+    align-self: center;
   }
 }

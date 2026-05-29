@@ -38,7 +38,7 @@ export default function Partnership() {
             transition={{ duration: 0.75, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
             viewport={{ once: true, margin: '-160px' }}
           >
-            <img src={imageConfig.industries.government} alt="Government fleet deployment" />
+            <img src={imageConfig.industries.government} alt="Government fleet deployment" loading="lazy" decoding="async" />
             <div className="visual-caption">
               <span>Fleet deployment channel</span>
               <strong>Federal, municipal and enterprise ready.</strong>

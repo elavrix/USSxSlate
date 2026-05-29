@@ -79,7 +79,7 @@ export default function VehiclePlatform() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.55 }}
           >
-            <img src={vehicle.image} alt={`${vehicle.name} Slate configuration`} />
+            <img src={vehicle.image} alt={`${vehicle.name} Slate configuration`} loading="lazy" decoding="async" />
           </motion.div>
           <button className="platform-arrow platform-arrow-next" type="button" aria-label="Next configuration" onClick={() => goTo(active + 1)}>
             ›

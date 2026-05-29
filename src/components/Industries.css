@@ -93,8 +93,16 @@
 }
 
 @media (max-width: 980px) {
+  .industries {
+    padding: 104px 0;
+  }
+
   .industries-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .industry-tile {
+    min-height: 360px;
   }
 }
 
@@ -109,5 +117,17 @@
 
   .industry-tile {
     min-height: 320px;
+  }
+
+  .industry-tile span {
+    left: 22px;
+    bottom: 22px;
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .industry-tile {
+    min-height: 280px;
   }
 }

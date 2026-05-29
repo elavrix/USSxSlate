@@ -23,7 +23,7 @@ export default function Hero() {
             <a className="primary-button" href="#fleet">
               Explore Fleet Programs
             </a>
-            <a className="secondary-button" href="#consultation">
+            <a className="secondary-button" href="#reserve-slate">
               Schedule Consultation
             </a>
           </div>
@@ -35,7 +35,14 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ duration: 1, delay: 0.12, ease: 'easeOut' }}
         >
-          <img src={imageConfig.hero.truck} alt="Slate electric pickup" className="hero-vehicle" />
+          <img
+            src={imageConfig.hero.truck}
+            alt="Slate electric pickup"
+            className="hero-vehicle"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+          />
         </motion.div>
       </div>
 
@@ -47,7 +54,8 @@ export default function Hero() {
       >
         <div className="hero-origin-inner container">
           <div className="origin-lockup">
-            <img className="origin-ussc" src={imageConfig.logos.ussc} alt="USSC" />
+            <img className="origin-ussc origin-ussc-dark" src={imageConfig.logos.ussc} alt="USSC" />
+            <img className="origin-ussc origin-ussc-light" src="/assets/logos/USSC-Black.svg" alt="USSC" />
             <span aria-hidden="true">x</span>
             <img className="origin-slate" src={imageConfig.logos.slate} alt="Slate Auto" />
           </div>

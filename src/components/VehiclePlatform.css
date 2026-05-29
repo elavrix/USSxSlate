@@ -44,6 +44,7 @@
   grid-template-columns: 64px 1fr 64px;
   align-items: center;
   gap: 24px;
+  position: relative;
 }
 
 .platform-image-stage {
@@ -150,6 +151,7 @@
 
 @media (max-width: 820px) {
   .vehicle-platform {
+    min-height: auto;
     padding: 78px 0;
   }
 
@@ -169,7 +171,7 @@
   }
 
   .platform-metrics {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .platform-controls {
@@ -182,18 +184,35 @@
 }
 
 @media (max-width: 560px) {
+  .vehicle-platform-inner {
+    grid-template-rows: auto auto auto;
+    gap: 24px;
+  }
+
   .platform-copy h2 {
     font-size: clamp(2.4rem, 12vw, 3.6rem);
   }
 
   .platform-image-shell {
     grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .platform-image-stage {
+    min-height: 260px;
+  }
+
+  .platform-image-stage img {
+    max-height: 310px;
   }
 
   .platform-arrow {
     position: absolute;
     z-index: 3;
-    top: 54%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(15, 17, 21, 0.58);
+    backdrop-filter: blur(12px);
   }
 
   .platform-arrow-prev {
@@ -204,8 +223,26 @@
     right: 18px;
   }
 
+  .platform-arrow:hover {
+    transform: translateY(-50%);
+  }
+
   .platform-selector {
     grid-template-columns: repeat(11, 1fr);
     gap: 6px;
+  }
+
+  .platform-metrics {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .platform-selector {
+    gap: 4px;
+  }
+
+  .platform-selector button {
+    height: 5px;
   }
 }
